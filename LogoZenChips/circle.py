@@ -13,5 +13,5 @@ def circle(r,d):
   
   
   t.penup()
-  t.back(d/20)
+  #t.back(d/20)
   

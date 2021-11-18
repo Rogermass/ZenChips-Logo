@@ -12,27 +12,29 @@ def triangle(a,b,c):
   t.backward(a)
   t.right(60)
   t.forward(a)
-
-  x = m.floor(a/b)
-  for i in range(1,x):
+  
+  z = ((b/m.sin(m.radians(60))))
+  x = m.floor(a/z)
+  for i in range(1,x+1):
     if i % 2 != 0:
 
       t.left(120)
-      t.forward(b)
+      t.forward(z)
       t.left(60)
-      t.backward((m.sin(30) * (a-(i*b))))
+      t.backward((m.sin(30)) * (a-(i*z)))
     
     else: 
 
       t.right(120)
-      t.forward(b)
+      t.forward(z)
       t.right(60)
-      t.backward((m.sin(30) * (a-(i*b))))
+      t.backward((m.sin(30) * (a-(i*z))))
 
 def triangle2(a,b,c):
   t.penup()
   t.goto(a/2,((c * 30) / 100))
   t.pendown()
+  t.setheading(0)
   t.color("black")
   t.left(120)
   t.forward(a)
@@ -42,18 +44,19 @@ def triangle2(a,b,c):
   t.forward(a)
   
 
-  z = m.floor(a/b)
+  z = ((b/m.sin(m.radians(60))))
+  x = m.floor(a/z)
 
-  for i in range(1, z):
+  for i in range(1, x+1):
     if i % 2 != 0: 
       t.left(120)
-      t.forward(b)
+      t.forward(z)
       t.left(60)
-      t.backward((m.sin(30) * (a-(i*b))))
+      t.backward((m.sin(30) * (a-(i*z))))
       
     else: 
         t.right(120)
-        t.forward(b)
+        t.forward(z)
         t.right(60)
-        t.backward((m.sin(30) * (a-(i*b))))
+        t.backward((m.sin(30) * (a-(i*z))))
         

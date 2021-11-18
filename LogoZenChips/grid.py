@@ -4,13 +4,13 @@ import math
 
 
 def gridvertical(r,d,h):
-
-  for y in range(20):
+  for y in range(1, 21):
     dif = r-((h)*y)
     t.penup()
     t.forward(h)
     t.pendown()
     length = 2*math.sqrt((r**2)-(dif**2));
+    
     
     t.left(90)
     
